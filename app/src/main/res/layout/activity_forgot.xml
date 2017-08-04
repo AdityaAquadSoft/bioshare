@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/White">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/dim_18"
+            android:textStyle="bold" />
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerVertical="true"
+        android:background="@color/Black"
+        android:id="@+id/lineBelowForgotPwd"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dim_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/forgotPasswordTextView"
+            android:text="@string/forgot_password_text"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/dim_16"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="@dimen/dim_10"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/enterMailTextView"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Enter Your Email ID"
+            android:textSize="@dimen/dim_16"
+            android:textColor="@color/Black"
+            android:padding="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_20"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/border_edittext"
+            android:padding="@dimen/dim_10"
+            android:id="@+id/emailForResetPwdEditView"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/dim_16"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Code_text_for_reset_password"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_40"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim_10"
+            android:text="Submit"
+            android:background="@color/DarkGray"
+            android:textColor="@color/White"
+            android:textSize="@dimen/dim_16"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dim_20"/>
+
+    </LinearLayout>
+</LinearLayout>

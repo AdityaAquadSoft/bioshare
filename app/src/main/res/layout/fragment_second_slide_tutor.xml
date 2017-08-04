@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.adityavats.bioshare.fargments.SecondSlideTutor">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tutorSlide2HeadingTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dim_20"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/tutorSlide2HeadingTextView"
+        android:text="HEADING 2"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/dim_20"
+        android:gravity="center"
+        android:padding="@dimen/dim_10"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tutorSlide2SubHeadingTextView"
+        android:text="HEADING"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/dim_16"
+        android:gravity="center"
+        android:padding="@dimen/dim_10"
+        android:layout_below="@+id/tutorSlide2HeadingTextView"/>
+
+</RelativeLayout>
+</FrameLayout>

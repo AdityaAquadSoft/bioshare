@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "847881591259",
+    "firebase_url": "https://fir-bioshare.firebaseio.com",
+    "project_id": "firebase-bioshare",
+    "storage_bucket": "firebase-bioshare.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847881591259:android:5d8cdbfce10f20df",
+        "android_client_info": {
+          "package_name": "com.example.adityavats.bioshare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847881591259-5ajv6qeqrhojetplkotj9qrpv262dv2b.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "847881591259-c9rbae8dtc6v0f1bhh6d22c5pdq8edtn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.adityavats.bioshare",
+            "certificate_hash": "5b5a680ba7eeb2c30adc4590463cfebeb4e40503"
+          }
+        },
+        {
+          "client_id": "847881591259-teu1etf3m0pbuafqhv6tuplv48m7ermv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9ay7AY54EGt5-ASICDGf5b0L1liZqc4s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847881591259-5ajv6qeqrhojetplkotj9qrpv262dv2b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
