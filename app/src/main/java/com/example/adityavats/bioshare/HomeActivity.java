@@ -3,10 +3,14 @@ package com.example.adityavats.bioshare;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.LinearLayoutCompat;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,22 +20,34 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.example.adityavats.bioshare.fargments.BuyFragment;
+import com.example.adityavats.bioshare.fargments.CompanyProfileFragment;
 import com.example.adityavats.bioshare.fargments.CompanySignup;
 import com.example.adityavats.bioshare.fargments.IndividualSignup;
 import com.example.adityavats.bioshare.fargments.SellFragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-ViewPager viewPager;
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private int[] tabIcons = {
+            R.drawable.tick,
+            R.drawable.tick};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -43,39 +59,44 @@ ViewPager viewPager;
         navigationView.setNavigationItemSelectedListener(this);
 
         viewPager=(ViewPager)findViewById(R.id.homePageViewer);
-        viewPager.setAdapter(new HomeActivity.SamplePagerAdapter(getSupportFragmentManager()));
-        PagerSlidingTabStrip tabsStrip = (PagerSlidingTabStrip) findViewById(R.id.homeTabBar);
-        tabsStrip.setViewPager(viewPager);
+        setupViewPager(viewPager);
+
+        tabLayout = (TabLayout) findViewById(R.id.homeTabBar);
+        tabLayout.setupWithViewPager(viewPager);
+        setupTabIcons();
     }
 
-    public class SamplePagerAdapter extends FragmentPagerAdapter {
-        final int PAGE_COUNT=2;
-        private String tabTitles[] = new String[] { "BUY", "SELL"};
-        public SamplePagerAdapter(FragmentManager fragmentManager) {
+    private void setupTabIcons() {
+        tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+        tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+    }
 
-            super(fragmentManager);
-        }
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter=new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFrag(new BuyFragment(),"BUY");
+        adapter.addFrag(new CompanyProfileFragment(),"SELL");
+        viewPager.setAdapter(adapter);
+    }
+    private class ViewPagerAdapter extends FragmentPagerAdapter {
 
-        @Override
-        public Fragment getItem(int position) {
-            if(position==0){
-
-                return new BuyFragment();
-            }
-            else
-            {
-                return new SellFragment();
-            }
-        }
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
+        public ViewPagerAdapter(FragmentManager fm) {super(fm);}
 
         @Override
-        public int getCount() {
-            return PAGE_COUNT;
-        }
+        public Fragment getItem(int position) {return mFragmentList.get(position);}
+
+        @Override
+        public int getCount() {return mFragmentList.size();}
+
         @Override
         public CharSequence getPageTitle(int position) {
-            // Generate title based on item position
-            return tabTitles[position];
+            return  mFragmentTitleList.get(position);
+        }
+
+        public void addFrag(Fragment fragment, String title) {
+            mFragmentList.add(fragment);
+            mFragmentTitleList.add(title);
         }
     }
 
@@ -135,4 +156,6 @@ ViewPager viewPager;
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

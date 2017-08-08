@@ -10,9 +10,22 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-
-
+       </style>
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
     </style>
+
+
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
     <style name="Theme.MyFancyTheme" parent="android:Theme.Holo">
         <item name="android:homeAsUpIndicator">@color/White</item>
     </style>

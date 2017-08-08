@@ -60,7 +60,8 @@
             android:parentActivityName=".SignupActivity" />
         <activity
             android:name=".HomeActivity"
-            android:label="">
+            android:label=""
+            android:theme="@style/MyMaterialTheme">
     </activity>
     </application>
 

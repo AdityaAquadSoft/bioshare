@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     tools:context="com.example.adityavats.bioshare.HomeActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dim_120"
-        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:background="@color/customGreen">
 
         <android.support.v7.widget.Toolbar
@@ -18,9 +17,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/customGreen"
-            app:popupTheme="@style/AppTheme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:contentInsetLeft="0dp"
-            app:contentInsetStart="0dp">
+            app:contentInsetStart="0dp"
+            app:layout_scrollFlags="scroll|enterAlways">
 
                  <LinearLayout
                     android:layout_width="match_parent"
@@ -38,23 +38,21 @@
                     <ImageView
                         android:layout_width="@dimen/dim_30"
                         android:layout_height="@dimen/dim_30"
-                        android:background="@drawable/rounded_image"
+                        android:background="@drawable/round_image_shadow"
                         android:src="@drawable/bell"
                         android:layout_marginTop="@dimen/dim_10"
                         android:layout_marginRight="@dimen/dim_15" />
                 </LinearLayout>
         </android.support.v7.widget.Toolbar>
-        <com.astuetz.PagerSlidingTabStrip
+
+        <android.support.design.widget.TabLayout
             android:id="@+id/homeTabBar"
-            app:pstsShouldExpand="true"
-            app:pstsTextAllCaps="false"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:pstsUnderlineHeight="0dp"
-            app:pstsIndicatorHeight="@dimen/dim_5"
-            app:pstsIndicatorColor="@color/White"
-            android:layout_gravity="center"
-            app:pstsDividerColor="?attr/android:panelBackground"/>
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            app:tabIndicatorHeight="@dimen/dim_5"
+            app:tabIndicatorColor="@color/White"
+            app:tabGravity="fill"/>
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_home" />

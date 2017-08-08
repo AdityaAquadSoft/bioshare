@@ -67,7 +67,7 @@
         <![CDATA[<font color=#05B642><u>Sign Up here</u></font>]]>
     </string>
     <string name="already_login_here"><u>Log In here</u></string>
-
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="desc_firebase_lockup">Firebase logo and name</string>
     <string name="phone_title_text">Enter the verification code sent to</string>
     <string name="hint_phone_number">Phone Number</string>
@@ -85,4 +85,7 @@
     <string name="signed_in">signed in</string>
     <string name="change_number">CHANGE HERE</string>
     <string name="select_categories_u_sell">Select the categories you would sell in</string>
+    <string name="to_start_selling_register_easily_as_seller">To start selling, register \neasily as a seller.</string>
+    <string name="view_edit_products">VIEW &amp; EDIT PRODUCTS</string>
+    <string name="Leads_ALerts">Leads &amp; Alerts</string>
 </resources>
