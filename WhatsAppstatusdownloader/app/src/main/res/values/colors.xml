@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#CB4145</color>
+    <color name="colorPrimaryDark">#CB4145</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="slelo">#EBF1DD</color>
+    <color name="progresscolor">#B24677</color>
+    <color name="fresh">#ECECEC</color>
+    <color name="light_grey">#CCCCCC</color>
+    <color name="white">#ffffff</color>
+    <color name="orange">#FF9900</color>
+    <color name="green">#009900</color>
+    <color name="blue">#000099</color>
+    <color name="black">#000000</color>
+</resources>

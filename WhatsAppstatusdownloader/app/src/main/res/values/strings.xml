@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">WhatsApp status downloader</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Insufficient_app_permission">Insufficient app permission</string>
+    <string name="Saved_to_gallery">Saved to gallery!</string>
+    <string name="Failed_to_save_to_gallery">Failed to save to gallery</string>
+    <string name="Loading">Loading…</string>
+    <string name="About">Share</string>
+    <string name="No_viewer_found">No viewer found</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="tab1">PHOTO</string>
+    <string name="tab2">VIDEO</string>
+    <string name="tab3">DOWNLOADED</string>
+    <string name="tab4">STATUS</string>
+    <string name="whatsappsee">First you have to Watch Status from your original Whatsapp messenger Application</string>
+</resources>
